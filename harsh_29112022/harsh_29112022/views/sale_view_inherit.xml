@@ -1,0 +1,18 @@
+<!-- SALE ORDER FORM VIEW INHERITED TO ADD A BUTTON -->
+<odoo>
+
+    <record id="sale_view_inherit" model="ir.ui.view">
+        <field name="name">sale.view.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']" position="before">
+                <button name="open_wizard" string="Select Surplus Charge" type="object"
+                        attrs="{'invisible': [('state', '=', 'sale')]}" class="btn-primary mb-3"/>
+                <br></br>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>

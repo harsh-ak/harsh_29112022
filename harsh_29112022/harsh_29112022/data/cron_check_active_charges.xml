@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- THIS IS THE CRONE JOB FOR CHECKING THE VALIDITY OF SURPLUS CHARGE -->
+<odoo>
+    <data>
+        <record id="cron_check_active_charges" model="ir.cron">
+            <field name="name">Check Charge Validity</field>
+            <field name="model_id" ref="harsh_29112022.model_surplus_charge"/>
+            <field name="state">code</field>
+            <field name="code">model.cron_check_charge_validity()</field>
+            <field name='interval_number'>1</field>
+            <field name='interval_type'>days</field>
+            <field name="numbercall">-1</field>
+        </record>
+    </data>
+</odoo>

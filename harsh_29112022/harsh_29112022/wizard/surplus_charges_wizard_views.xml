@@ -1,0 +1,26 @@
+<odoo>
+
+    <!-- SURPLUS CHARGE WIZARD FORM VIEW -->
+
+    <record id="surplus_charges_wizard_form" model="ir.ui.view">
+
+        <field name="name">surplus.charges.wizard.form</field>
+        <field name="model">surplus.charge.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+
+                <group>
+                    <field name="product_id"/>
+                </group>
+
+                <footer>
+                    <button name="add_charges" string="Add" class="btn-primary" type="object"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+
+            </form>
+        </field>
+
+    </record>
+
+</odoo>
